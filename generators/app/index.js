@@ -15,9 +15,10 @@ module.exports = class extends Generator {
 
   prompting() {
     // Have Yeoman greet the user.
-    this.log(
-      yosay(`Welcome to the funkadelic ${chalk.red('generator-go-cli')} generator!`)
-    );
+    if (!this.options.silent) {
+      let name = chalk.red('generator-license-full');
+      this.log(yosay(`Welcome to the funkadelic ${name} generator!`));
+    }
 
     let choices = [];
     simpleLics.forEach(id => {
