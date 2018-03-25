@@ -5,7 +5,7 @@
   "homepage": "https://github.com/kyoh86/generator-license-full#readme",
   "author": "kyoh86",
   "files": ["generators"],
-  "main": "index.js",
+  "main": "generators/app/index.js",
   "keywords": [
     "yeoman",
     "generator",
