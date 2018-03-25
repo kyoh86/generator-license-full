@@ -22,7 +22,9 @@ module.exports = class extends Generator {
 
     let choices = [];
     simpleLics.forEach(id => {
-      choices.push({ name: id, value: fulLics[id] });
+      let obj = fulLics[id];
+      obj.id = id;
+      choices.push({ name: id, value: obj });
     });
     let fuseOptions = {
       shouldSort: true,
