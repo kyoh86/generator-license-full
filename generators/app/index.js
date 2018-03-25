@@ -57,7 +57,55 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    // TODO: write 'README'
+    const caption = /^(#+)\s*license$/i;
+    let readme = this.fs.read('README.md', { defaults: '' });
+    let level = '';
+    let next = null;
+    let remove = false;
+    let newlines = [];
+    let l = this.props.license;
+    let inserted = false;
+    let insert = function() {
+      if (inserted) {
+        return;
+      }
+      if (level === '') {
+        level = '#';
+      }
+      newlines.push(level + ' LICENSE');
+      newlines.push('');
+      newlines.push(
+        '[![' +
+          l.name +
+          '](http://img.shields.io/badge/license-' +
+          encodeURIComponent(l.id).replace('-', '--') +
+          '-blue.svg)](' +
+          l.url +
+          ')'
+      );
+      newlines.push('This is distributed under the [' + l.name + '](' + l.url + ').');
+      inserted = true;
+    };
+    readme.split(/\r?\n/).forEach(line => {
+      if (remove) {
+        if (!next.test(line)) {
+          return;
+        }
+        insert();
+        remove = false;
+      }
+      let match = caption.exec(line);
+      if (match) {
+        remove = true;
+        level = match[1];
+        next = new RegExp('^' + level + '(?!#)');
+        return;
+      }
+      newlines.push(line);
+    });
+    insert();
+    this.fs.write('README.md', newlines.join('\n'));
+
     this.fs.write('LICENSE', this.props.license.licenseText);
   }
 };
