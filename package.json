@@ -4,7 +4,9 @@
   "description": "A Yeoman generator to create license file.",
   "homepage": "https://github.com/kyoh86/generator-license-full#readme",
   "author": "kyoh86",
-  "files": ["generators"],
+  "files": [
+    "generators"
+  ],
   "main": "generators/app/index.js",
   "keywords": [
     "yeoman",
@@ -46,6 +48,7 @@
     "fuse.js": "^3.2.0",
     "generator-generator": "^4.0.2",
     "inquirer-autocomplete-prompt": "^0.12.2",
+    "merge": "^1.2.0",
     "spdx-license-list": "^4.0.0",
     "yeoman-generator": "^2.0.1",
     "yosay": "^2.0.1"
@@ -54,11 +57,20 @@
     "testEnvironment": "node"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.json": ["prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
-    "extends": ["xo", "prettier"],
+    "extends": [
+      "xo",
+      "prettier"
+    ],
     "env": {
       "jest": true,
       "node": true
@@ -72,6 +84,8 @@
         }
       ]
     },
-    "plugins": ["prettier"]
+    "plugins": [
+      "prettier"
+    ]
   }
 }
