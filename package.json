@@ -1,6 +1,6 @@
 {
   "name": "generator-license-full",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Yeoman generator to create license file.",
   "homepage": "https://github.com/kyoh86/generator-license-full#readme",
   "author": "kyoh86",
