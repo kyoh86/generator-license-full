@@ -1,4 +1,4 @@
-# generator-license [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-license [![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > A Yeoman generator to create license file.
 
 ## Installation
@@ -30,8 +30,6 @@ MIT © [kyoh86](https://kyoh.net)
 
 [npm-image]: https://badge.fury.io/js/generator-license.svg
 [npm-url]: https://npmjs.org/package/generator-license
-[travis-image]: https://travis-ci.org/kyoh86/generator-license.svg?branch=master
-[travis-url]: https://travis-ci.org/kyoh86/generator-license
 [daviddm-image]: https://david-dm.org/kyoh86/generator-license.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/kyoh86/generator-license
 [coveralls-image]: https://coveralls.io/repos/kyoh86/generator-license/badge.svg
