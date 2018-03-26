@@ -2,6 +2,7 @@
 const Generator = require("yeoman-generator");
 const chalk = require("chalk");
 const yosay = require("yosay");
+const merge = require("merge");
 const simpleLics = require("spdx-license-list/simple");
 const fulLics = require("spdx-license-list/full");
 const autocomplete = require("inquirer-autocomplete-prompt");
@@ -53,7 +54,7 @@ module.exports = class extends Generator {
     }
 
     return this.prompt(prompts).then(props => {
-      this.props = props;
+      this.props = merge(this.options, props);
     });
   }
 
