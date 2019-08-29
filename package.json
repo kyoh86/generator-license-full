@@ -4,7 +4,9 @@
   "description": "A Yeoman generator to create license file.",
   "homepage": "https://github.com/kyoh86/generator-license-full#readme",
   "author": "kyoh86",
-  "files": ["generators"],
+  "files": [
+    "generators"
+  ],
   "main": "generators/app/index.js",
   "keywords": [
     "yeoman",
@@ -13,23 +15,8 @@
     "license",
     "yeoman-generator"
   ],
-  "devDependencies": {
-    "coveralls": "^3.0.6",
-    "eslint": "^4.1.0",
-    "eslint-config-prettier": "^2.4.0",
-    "eslint-config-xo": "^0.18.2",
-    "eslint-plugin-prettier": "^2.2.0",
-    "husky": "^0.14.3",
-    "jest": "^25.0.0",
-    "lint-staged": "^4.2.1",
-    "nsp": "^2.6.3",
-    "prettier": "^1.7.0",
-    "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^2.0.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1 && jest",
-    "prepublish": "nsp check",
     "pretest": "eslint .",
     "precommit": "lint-staged"
   },
@@ -41,25 +28,24 @@
   "bugs": {
     "url": "https://github.com/kyoh86/generator-license-full/issues"
   },
-  "dependencies": {
-    "chalk": "^2.1.0",
-    "fuse.js": "^3.2.0",
-    "generator-generator": "^4.0.2",
-    "inquirer-autocomplete-prompt": "^0.12.2",
-    "merge": "^1.2.0",
-    "spdx-license-list": "^4.0.0",
-    "yeoman-generator": "^2.0.1",
-    "yosay": "^2.0.2"
-  },
   "jest": {
     "testEnvironment": "node"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.json": ["prettier --write", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "eslintConfig": {
-    "extends": ["xo", "prettier"],
+    "extends": [
+      "xo",
+      "prettier"
+    ],
     "env": {
       "jest": true,
       "node": true
@@ -73,6 +59,31 @@
         }
       ]
     },
-    "plugins": ["prettier"]
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "dependencies": {
+    "fuse.js": "^3.4.5",
+    "generator-generator": "^4.0.2",
+    "inquirer-autocomplete-prompt": "^1.0.1",
+    "merge": "^1.2.1",
+    "spdx-license-list": "^6.1.0",
+    "yeoman-generator": "^4.0.1",
+    "yosay": "^2.0.2"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.6",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-xo": "^0.26.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "nsp": "^3.2.1",
+    "prettier": "^1.18.2",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^2.0.0"
   }
 }
