@@ -67,7 +67,7 @@
     "fuse.js": "^5.1.0",
     "generator-generator": "^4.0.2",
     "inquirer-autocomplete-prompt": "^1.0.1",
-    "merge": "^1.2.1",
+    "merge": "^2.1.1",
     "spdx-license-list": "^6.1.0",
     "yeoman-generator": "^4.0.1",
     "yosay": "^2.0.2"
